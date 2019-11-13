@@ -219,6 +219,12 @@ function doAlign(el, tgtRegion, align, isTgtRegionVisible) {
     );
   }
 
+  if (align.disableOffset) {
+    return {
+      left: newElRegion.left,
+      top: newElRegion.top,
+    };
+  }
   // https://github.com/kissyteam/kissy/issues/190
   // 相对于屏幕位置没变，而 left/top 变了
   // 例如 <div 'relative'><el absolute></div>

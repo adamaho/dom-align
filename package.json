@@ -23,7 +23,7 @@
     "lint-staged": "lint-staged",
     "prettier": "prettier --write \"{src,tests}/**/*.{js,tsx}\"",
     "pub": "npm run build && npm publish pkg",
-    "build": "pack build",
+    "build": "pika build",
     "gh-pages": "rc-tools run gh-pages",
     "start": "rc-tools run server",
     "karma": "rc-test run karma",
@@ -54,22 +54,23 @@
     ]
   },
   "devDependencies": {
+    "@pika/pack": "0.5.0",
     "@pika/plugin-build-node": "^0.6.0",
     "@pika/plugin-build-types": "^0.6.0",
-    "pika-plugin-build-web-babel": "^0.6.0",
     "@pika/plugin-standard-pkg": "^0.6.0",
     "@pika/types": "^0.6.0",
     "babel-preset-env": "^1.7.0",
+    "create-react-class": "^15.6.3",
     "expect.js": "^0.3.1",
     "jquery": "^3.4.1",
+    "lint-staged": "^9.2.1",
+    "pika-plugin-build-web-babel": "^0.6.0",
     "pre-commit": "1.x",
+    "prettier": "^1.18.2",
     "rc-test": "6.x",
     "rc-tools": "6.x",
     "react": "16.x",
-    "react-dom": "16.x",
-    "create-react-class": "^15.6.3",
-    "lint-staged": "^9.2.1",
-    "prettier": "^1.18.2"
+    "react-dom": "16.x"
   },
   "lint-staged": {
     "*.{tsx,js,jsx,ts}": [
@@ -79,5 +80,6 @@
   },
   "pre-commit": [
     "lint-staged"
-  ]
+  ],
+  "dependencies": {}
 }
